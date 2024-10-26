@@ -23,28 +23,39 @@ build:
   # here:
   # https://skaffold.dev/docs/concepts/#image-repository-handling
   - image: emailservice
+    platforms: ["linux/amd64"]
     context: src/emailservice
   - image: productcatalogservice
+    platforms: ["linux/amd64"]
     context: src/productcatalogservice
   - image: recommendationservice
+    platforms: ["linux/amd64"]
     context: src/recommendationservice
   - image: shoppingassistantservice
+    platforms: ["linux/amd64"]
     context: src/shoppingassistantservice
   - image: shippingservice
+    platforms: ["linux/amd64"]
     context: src/shippingservice
   - image: checkoutservice
+    platforms: ["linux/amd64"]
     context: src/checkoutservice
   - image: paymentservice
+    platforms: ["linux/amd64"]
     context: src/paymentservice
   - image: currencyservice
+    platforms: ["linux/amd64"]
     context: src/currencyservice
   - image: cartservice
+    platforms: ["linux/amd64"]
     context: src/cartservice/src
     docker:
       dockerfile: Dockerfile
   - image: frontend
+    platforms: ["linux/amd64"]
     context: src/frontend
   - image: adservice
+    platforms: ["linux/amd64"]
     context: src/adservice
   tagPolicy:
     gitCommit: {}
@@ -101,6 +112,7 @@ requires:
 build:
   artifacts:
   - image: loadgenerator
+    platforms: ["linux/amd64"]
     context: src/loadgenerator
 manifests:
   rawYaml:
