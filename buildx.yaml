@@ -2,49 +2,49 @@ skaffold build --platform=linux/amd64  --default-repo=index.docker.io/ajitone -f
 
 
 
-docker buildx build --platform linux/amd64 -t ajitone/paymentservice src/paymentservice
+docker buildx build --platform linux/amd64 -t ajitone/paymentservice src/paymentservice --no-cache
 docker push ajitone/paymentservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/loadgenerator src/loadgenerator
+docker buildx build --platform linux/amd64 -t ajitone/loadgenerator src/loadgenerator --no-cache
 docker push ajitone/loadgenerator:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/emailservice src/emailservice
+docker buildx build --platform linux/amd64 -t ajitone/emailservice src/emailservice --no-cache
 docker push ajitone/emailservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/adservice src/adservice
+docker buildx build --platform linux/amd64 -t ajitone/adservice src/adservice --no-cache
 docker push ajitone/adservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/checkoutservice src/checkoutservice
+docker buildx build --platform linux/amd64 -t ajitone/checkoutservice src/checkoutservice --no-cache
 docker push ajitone/checkoutservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/currencyservice src/currencyservice
+docker buildx build --platform linux/amd64 -t ajitone/currencyservice src/currencyservice --no-cache
 docker push ajitone/currencyservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/frontend src/frontend
+docker buildx build --platform linux/amd64 -t ajitone/frontend src/frontend --no-cache
 docker push ajitone/frontend:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/productcatalogservice src/productcatalogservice
+docker buildx build --platform linux/amd64 -t ajitone/productcatalogservice src/productcatalogservice --no-cache
 docker push ajitone/productcatalogservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/recommendationservice src/recommendationservice
+docker buildx build --platform linux/amd64 -t ajitone/recommendationservice src/recommendationservice --no-cache
 docker push ajitone/recommendationservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/shippingservice src/shippingservice
+docker buildx build --platform linux/amd64 -t ajitone/shippingservice src/shippingservice --no-cache
 docker push ajitone/shippingservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/shoppingassistantservice src/shoppingassistantservice
+docker buildx build --platform linux/amd64 -t ajitone/shoppingassistantservice src/shoppingassistantservice --no-cache
 docker push ajitone/shoppingassistantservice:latest
 
 
-docker buildx build --platform linux/amd64 -t ajitone/cartservice --load -f src/cartservice/src/Dockerfile src/cartservice/src
+docker buildx build --platform linux/amd64 -t ajitone/cartservice --load -f src/cartservice/src/Dockerfile src/cartservice/src --no-cache
 docker push ajitone/cartservice:latest
