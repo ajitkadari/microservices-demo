@@ -168,7 +168,8 @@ func initTracing() error {
 	}
 	tp := sdktrace.NewTracerProvider(
 		sdktrace.WithBatcher(exporter),
-		sdktrace.WithSampler(sdktrace.AlwaysSample()))
+		sdktrace.WithSampler(sdktrace.AlwaysSample()),
+		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exporter)))
 	otel.SetTracerProvider(tp)
 	return err
 }

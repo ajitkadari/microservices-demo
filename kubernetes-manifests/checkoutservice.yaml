@@ -66,6 +66,12 @@ spec:
             value: "currencyservice:7000"
           - name: CART_SERVICE_ADDR
             value: "cartservice:7070"
+          - name: COLLECTOR_SERVICE_ADDR
+            value: "grafana-k8s-monitoring-alloy.monitoring.svc.cluster.local:4317"
+          - name: ENABLE_TRACING
+            value: "1"
+          - name: ENABLE_PROFILER
+            value: ""
           resources:
             requests:
               cpu: 100m

@@ -185,7 +185,8 @@ func initTracing(log logrus.FieldLogger, ctx context.Context, svc *frontendServe
 	}
 	tp := sdktrace.NewTracerProvider(
 		sdktrace.WithBatcher(exporter),
-		sdktrace.WithSampler(sdktrace.AlwaysSample()))
+		sdktrace.WithSampler(sdktrace.AlwaysSample()),
+		sdktrace.WithSpanProcessor(sdktrace.NewBatchSpanProcessor(exporter)))
 	otel.SetTracerProvider(tp)
 
 	return tp, err
